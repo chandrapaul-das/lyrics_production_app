@@ -36,7 +36,7 @@ async def generate_lyrics(request: SongRequest):
             model = genai.GenerativeModel('gemini-1.5-flash')
             response = model.generate_content(
                 f'''Generate a song lyrics in {request.lang} language and {request.genre} genre. {types[0]}{desc_part}
-                ###Important: Only give the lyrics as output.''',
+                ###Important: Only give the lyrics as output. Always give the output in english alphabets.''',
                 generation_config=genai.types.GenerationConfig(
                     candidate_count=1,
                     temperature=1
