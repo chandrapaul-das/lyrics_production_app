@@ -46,7 +46,7 @@ class _LyricsGeneratorPageState extends State<LyricsGeneratorPage> {
     });
 
     final response = await http.post(
-      Uri.parse('https://lyrics_production_app.vercel.app/api/generate-lyrics/'),
+      Uri.parse('https://lyrics-production-app.onrender.com/generate-lyrics/'),
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -88,8 +88,8 @@ class _LyricsGeneratorPageState extends State<LyricsGeneratorPage> {
           title: Text('Input Error'),
           content: Text(
             'Possible reasons for failure:\n\n'
-            'The given language or genre might not be appropriate\n'
-             'Language or Genre is not provided',
+            '• The given language or genre might not be appropriate\n'
+            '• Language or Genre is not provided',
           ),
           actions: [
             TextButton(
