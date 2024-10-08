@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-gemini_api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+gemini_api_key = 'AIzaSyAMuWjUrdIB69nuEwmnvecT0HfUWejfCGk'
 genai.configure(api_key=gemini_api_key)
 
 class SongRequest(BaseModel):
